@@ -8,7 +8,7 @@ namespace Producer
    {
       public static void Main(string[] args)
       {
-         var factory = new ConnectionFactory() { HostName = "localhost" };
+         var factory = new ConnectionFactory() { HostName = "localhost:8080" };
          using (var connection = factory.CreateConnection())
          using (var chanel = connection.CreateModel())
          {
