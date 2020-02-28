@@ -8,7 +8,7 @@ namespace Producer
    {
       public static void Main(string[] args)
       {
-         var factory = new ConnectionFactory() { HostName = "*", Port = 5672 };
+         var factory = new ConnectionFactory() { HostName = "my-rabbitmq", Port = 5672 };
          using (var connection = factory.CreateConnection())
          using (var chanel = connection.CreateModel())
          {
