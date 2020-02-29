@@ -9,6 +9,8 @@ namespace Consumer
    {
       public static void Main(string[] args)
       {
+         Console.WriteLine("Start Consumer App...");
+
          var factory = new ConnectionFactory() { HostName = "my-rabbitmq", Port = 5672 };
          using (var connection = factory.CreateConnection())
          using (var chanel = connection.CreateModel())

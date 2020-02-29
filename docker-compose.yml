@@ -10,3 +10,7 @@ services:
       restart: always
       depends_on:
           - my-rabbitmq
+  my-consumer:
+      image: consumer_app
+      depends_on:
+          - my-rabbitmq
