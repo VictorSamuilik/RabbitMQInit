@@ -6,12 +6,12 @@ services:
       - 5672:5672
       - 15672:15672
   my-producer:
-      image: producer_app
+      build: ./Producer
       restart: always
       depends_on:
           - my-rabbitmq
   my-consumer:
-      image: consumer_app
+      build: ./Consumer
       restart: always
       depends_on:
           - my-rabbitmq
