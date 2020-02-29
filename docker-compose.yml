@@ -12,5 +12,6 @@ services:
           - my-rabbitmq
   my-consumer:
       image: consumer_app
+      restart: always
       depends_on:
           - my-rabbitmq
